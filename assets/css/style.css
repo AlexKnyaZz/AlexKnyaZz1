@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+h1{
+    margin: 0;
+    font-size: 100px;
+}
+
+/* Header */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header_inner{
+    display: flex; /*отображение справа*/
+    justify-content: space-between;
+    align-items: center; /*выравнять по центру*/
+    padding-top: 30px; /*отступ сверху*/
+}
+
+.header_logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.container_for_header{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 50px;
+}
+
+/* Navigation */
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav_link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+    transition: color .1s linear; /*0.1s*/
+}
+
+.nav_link::after{
+    content:"";
+    display:block;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+
+    background-color:orange;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+}
+
+.nav_link:hover{
+    color:orange;
+}
+
+.nav_link:hover::after{
+    opacity: 1;
+}
+
+/* Intro */
+.intro{
+    background-image: url(https://img2.akspic.ru/attachments/crops/4/4/7/8/3/138744/138744-fenek-hishhnik-psovye-ryzhaya_lisica-morda-3840x2160.jpg);
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 50vh;
+    margin: 0;
+    font-size: 50px;
+}
+
+.intro_inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.intro_title{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align:center;
+    line-height:4.5; /*отступ сверху*/
+}
+
+/* About */
+.about{
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.container_for_about_title{
+    background-color:blueviolet;
+}
+
+.container_for_about{
+    background-color:gray;
+    position: absolute;
+    left:25%;
+    width: 50%;
+    height: 50vh;
+}
